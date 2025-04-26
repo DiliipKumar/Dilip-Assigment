@@ -90,6 +90,7 @@ Should show the NodePort service.
 
 
 <img width="697" alt="Screenshot 2025-04-26 at 2 53 59 PM" src="https://github.com/user-attachments/assets/23a14d36-e13b-4e92-acff-2de6073fcc13" />
+
 <img width="697" alt="Screenshot 2025-04-26 at 2 54 10 PM" src="https://github.com/user-attachments/assets/b4fe16a0-156b-48d6-a0ca-edbe14e95356" />
 <img width="1241" alt="Screenshot 2025-04-26 at 2 57 53 PM" src="https://github.com/user-attachments/assets/4c2cbb5b-e911-486c-a7f8-c4be7f351aa5" />
 <img width="936" alt="Screenshot 2025-04-26 at 3 03 10 PM" src="https://github.com/user-attachments/assets/5e8f065e-b60a-4cb0-ad51-eeaefbc6ef81" />
