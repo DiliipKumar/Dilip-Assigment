@@ -2,39 +2,48 @@ pipeline {
     agent any
 
     environment {
-        // Set your Docker Hub credentials (DockerHub username and password)
-        DOCKER_HUB_CREDENTIALS = credentials('docker-hub-credentials') // This refers to the Jenkins credentials store
-        IMAGE_NAME = "your-dockerhub-username/your-image-name"
+        PATH = "/opt/homebrew/bin:/usr/local/bin:$PATH"
+        IMAGE_NAME = "dilipkumar17072002625/assigment"
         TAG = "latest"
+        DOCKER_USERNAME = "dilipkumar17072002625"
+        DOCKER_PASSWORD = "dckr_pat_LvODVALAnlf54QSGx4mqpyL3IDo"  // Store your PAT here
+        GIT_REPO_URL = 'https://github.com/DiliipKumar/Dilip-Assigment.git'
+        BRANCH_NAME = "main"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                // Checkout the repository
-                git 'https://github.com/your-repo-url.git'
-            }
-        }
-        
-        stage('Build Docker Image') {
-            steps {
                 script {
-                    // Build Docker image using the Dockerfile
-                    docker.build("${IMAGE_NAME}:${TAG}")
+                    echo "Checking out the repository"
+                    dir('/Users/dilip/Desktop/Dilip-Assigment') {
+                        git branch: BRANCH_NAME, url: GIT_REPO_URL
+                    }
                 }
             }
         }
-        
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    echo "Building Docker image"
+                    dir('/Users/dilip/Desktop/Dilip-Assigment/Application') {
+                        sh '''
+                            docker build -t ${IMAGE_NAME}:${TAG} .
+                        '''
+                    }
+                }
+            }
+        }
+
         stage('Push to Docker Hub') {
             steps {
                 script {
-                    // Login to Docker Hub
-                    withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
-                        sh """
-                            docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-                            docker push ${IMAGE_NAME}:${TAG}
-                        """
-                    }
+                    echo "Logging into Docker Hub and pushing the image"
+                    sh '''
+                        echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+                        docker push ${IMAGE_NAME}:${TAG}
+                    '''
                 }
             }
         }
@@ -42,8 +51,10 @@ pipeline {
     
     post {
         always {
-            // Clean up Docker images to save space
-            sh 'docker system prune -af'
+            echo "Cleaning up Docker images"
+            sh '''
+                docker system prune -af || true
+            '''
         }
     }
 }
