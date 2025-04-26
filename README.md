@@ -20,3 +20,4 @@ project-root/
     └── (Terraform)               # Infrastructure provisioning files
 ```
 
+<img width="697" alt="Screenshot 2025-04-26 at 2 53 59 PM" src="https://github.com/user-attachments/assets/23a14d36-e13b-4e92-acff-2de6073fcc13" />
