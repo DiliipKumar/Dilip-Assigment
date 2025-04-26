@@ -1,1 +1,20 @@
-hi
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-world-app
+  template:
+    metadata:
+      labels:
+        app: hello-world-app
+    spec:
+      containers:
+      - name: hello-world-app
+        image: hello-world-app
+        imagePullPolicy: Never  # For local development with Minikube
+        ports:
+        - containerPort: 3000
