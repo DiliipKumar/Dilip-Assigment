@@ -1,0 +1,49 @@
+pipeline {
+    agent any
+
+    environment {
+        // Set your Docker Hub credentials (DockerHub username and password)
+        DOCKER_HUB_CREDENTIALS = credentials('docker-hub-credentials') // This refers to the Jenkins credentials store
+        IMAGE_NAME = "your-dockerhub-username/your-image-name"
+        TAG = "latest"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the repository
+                git 'https://github.com/your-repo-url.git'
+            }
+        }
+        
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build Docker image using the Dockerfile
+                    docker.build("${IMAGE_NAME}:${TAG}")
+                }
+            }
+        }
+        
+        stage('Push to Docker Hub') {
+            steps {
+                script {
+                    // Login to Docker Hub
+                    withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                        sh """
+                            docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+                            docker push ${IMAGE_NAME}:${TAG}
+                        """
+                    }
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            // Clean up Docker images to save space
+            sh 'docker system prune -af'
+        }
+    }
+}
