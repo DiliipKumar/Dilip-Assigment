@@ -13,7 +13,7 @@ project-root/
 │   ├── service.yaml              # Kubernetes Service configuration
 │   └── ingress.yaml              # Kubernetes Ingress configuration (if applicable)
 │
-├── jenkins/                      # CI/CD pipeline configurations
+├── jenkins/                      # CI
 │   └── backend-pipeline          # Jenkins pipeline definition
 │
 └── iac/                          # Infrastructure as Code configurations
