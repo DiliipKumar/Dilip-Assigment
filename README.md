@@ -30,7 +30,33 @@ project-root/
 <img width="896" alt="Screenshot 2025-04-26 at 4 06 02 PM" src="https://github.com/user-attachments/assets/c2851c90-479e-4acf-af32-d3a7247ae944" />
 
 
-## CI/CD Pipeline
+
+# Jenkins CI/CD Pipeline Documentation
+
+## Overview
+This document describes the Jenkins pipeline setup for automating the build, test, and deployment of the Node.js application to Kubernetes.
+
+---
+
+## Pipeline Structure
+
+```
+jenkins/
+└── backend-pipeline    # Jenkinsfile (scripted or declarative pipeline)
+```
+
+---
+
+## Stages
+
+- **Checkout Code**: Clone the source code from GitHub.
+- **Build Docker Image**: Build and tag the Docker image.
+- **Push to DockerHub**: Push the tagged Docker image to DockerHub.
+
+---
+
+Done!  
+Would you like an even more minimal version too? 🔥
 
 <img width="1221" alt="Screenshot 2025-04-26 at 4 48 24 PM" src="https://github.com/user-attachments/assets/ce30c1c5-9682-4602-920d-60f5a9b11ba5" />
 <img width="1221" alt="Screenshot 2025-04-26 at 4 51 50 PM" src="https://github.com/user-attachments/assets/b42e1560-9d43-4318-9a39-1a69041a1849" />
