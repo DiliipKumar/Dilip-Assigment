@@ -1,17 +1,17 @@
 project-root/
-├── app/                          # Application code
-│   ├── Dockerfile
-│   ├── server.js
-│   ├── package.json
-│   └── package-lock.json
+├── app/                          # Application source code and Docker configuration
+│   ├── Dockerfile                # Multi-stage Dockerfile for the Node.js application
+│   ├── server.js                 # Express.js application entry point
+│   ├── package.json              # Node.js dependencies and scripts
+│   └── package-lock.json         # Lock file for dependencies
 │
-├── k8s/                          # Kubernetes manifests
-│   ├── deployment.yaml
-│   ├── service.yaml
-│   └── ingress.yaml
+├── k8s/                          # Kubernetes deployment manifests
+│   ├── deployment.yaml           # Kubernetes Deployment configuration
+│   ├── service.yaml              # Kubernetes Service configuration
+│   └── ingress.yaml              # Kubernetes Ingress configuration (if applicable)
 │
-├── jenkins/                      # Jenkins pipelines
-│   └── backend-pipeline          # Your existing pipeline
+├── jenkins/                      # CI/CD pipeline configurations
+│   └── backend-pipeline          # Jenkins pipeline definition
 │
-├── iac/                          # Infrastructure as Code
-│   └── 
+└── iac/                          # Infrastructure as Code configurations
+    └── (Terraform/Ansible files)  # Infrastructure provisioning files
