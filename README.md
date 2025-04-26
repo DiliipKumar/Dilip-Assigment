@@ -1,3 +1,6 @@
+## Project Structure
+
+```
 project-root/
 ├── app/                          # Application source code and Docker configuration
 │   ├── Dockerfile                # Multi-stage Dockerfile for the Node.js application
@@ -14,4 +17,6 @@ project-root/
 │   └── backend-pipeline          # Jenkins pipeline definition
 │
 └── iac/                          # Infrastructure as Code configurations
-    └── (Terraform/Ansible files)  # Infrastructure provisioning files
+    └── (Terraform)               # Infrastructure provisioning files
+```
+
