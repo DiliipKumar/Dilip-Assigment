@@ -36,7 +36,7 @@ project-root/
 
 #### Build the Docker image
 ```bash
-docker build -t node-app .
+docker build -t hello-world-app .
 ```
 
 #### Start Minikube
@@ -46,12 +46,13 @@ minikube start
 
 #### Load the Docker image into Minikube
 ```bash
-minikube image load node-app:latest
+minikube image load hello-world-app:latest
 ```
 
-#### Deploy to Kubernetes
+#### Deploy to Deployment and service yaml file
 ```bash
-kubectl apply -f kubernetes/
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
 ```
 
 #### Verify the deployment
@@ -63,13 +64,13 @@ kubectl get services
 
 ### Access the application
 ```bash
-minikube service node-app-service
+minikube service hello-world-service
 ```
 Or use port-forwarding:
 ```bash
-kubectl port-forward service/node-app-service 3000:3000
+kubectl port-forward service/hello-world 3000:3000
 ```
-Then access at [http://localhost:8080](http://localhost:8080)
+Then access at [http://localhost:3000](http://localhost:3000)
 
 ---
 
