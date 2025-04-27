@@ -116,6 +116,15 @@ Should show the NodePort service.
 
 ---
 
+<img width="1402" alt="Screenshot 2025-04-27 at 12 15 19 PM" src="https://github.com/user-attachments/assets/03bcd22e-4594-4b7e-8009-acf7af8d7e8c" />
+<img width="1406" alt="Screenshot 2025-04-27 at 12 17 50 PM" src="https://github.com/user-attachments/assets/102c2815-d8cb-415d-812b-f8ef8325e163" />
+<img width="1203" alt="Screenshot 2025-04-27 at 12 18 30 PM" src="https://github.com/user-attachments/assets/c7839aa8-64e9-4346-b8b2-80e5101dca29" />
+<img width="1203" alt="Screenshot 2025-04-27 at 12 24 30 PM" src="https://github.com/user-attachments/assets/a339a817-191d-459e-b5b5-1ce614cf30b3" />
+<img width="1463" alt="Screenshot 2025-04-27 at 12 29 29 PM" src="https://github.com/user-attachments/assets/be10a605-2f8d-468e-bc93-ce43a6f5fd75" />
+<img width="1463" alt="Screenshot 2025-04-27 at 12 29 55 PM" src="https://github.com/user-attachments/assets/ba74c197-4675-4ff5-ae0b-0fddcd92f8ff" />
+<img width="1463" alt="Screenshot 2025-04-27 at 12 30 24 PM" src="https://github.com/user-attachments/assets/52b0b182-b5c5-478e-9469-9c192f3e712f" />
+
+
 # Jenkins CI/CD Pipeline Documentation
 
 ## Overview
@@ -141,13 +150,7 @@ jenkins/
 ---
 
 
-<img width="1402" alt="Screenshot 2025-04-27 at 12 15 19 PM" src="https://github.com/user-attachments/assets/03bcd22e-4594-4b7e-8009-acf7af8d7e8c" />
-<img width="1406" alt="Screenshot 2025-04-27 at 12 17 50 PM" src="https://github.com/user-attachments/assets/102c2815-d8cb-415d-812b-f8ef8325e163" />
-<img width="1203" alt="Screenshot 2025-04-27 at 12 18 30 PM" src="https://github.com/user-attachments/assets/c7839aa8-64e9-4346-b8b2-80e5101dca29" />
-<img width="1203" alt="Screenshot 2025-04-27 at 12 24 30 PM" src="https://github.com/user-attachments/assets/a339a817-191d-459e-b5b5-1ce614cf30b3" />
-<img width="1463" alt="Screenshot 2025-04-27 at 12 29 29 PM" src="https://github.com/user-attachments/assets/be10a605-2f8d-468e-bc93-ce43a6f5fd75" />
-<img width="1463" alt="Screenshot 2025-04-27 at 12 29 55 PM" src="https://github.com/user-attachments/assets/ba74c197-4675-4ff5-ae0b-0fddcd92f8ff" />
-<img width="1463" alt="Screenshot 2025-04-27 at 12 30 24 PM" src="https://github.com/user-attachments/assets/52b0b182-b5c5-478e-9469-9c192f3e712f" />
+
 
 
 # Jenkins Pipeline Screenshots
