@@ -212,7 +212,7 @@ This document describes the Jenkins pipeline setup for automating the build, tes
 ```
 jenkins/
 └── backend-pipeline    # Jenkinsfile (scripted or declarative pipeline)
-```
+
 
 ---
 
