@@ -100,6 +100,8 @@ Should show the NodePort service.
 
 ![Service List](https://github.com/user-attachments/assets/4c2cbb5b-e911-486c-a7f8-c4be7f351aa5)
 
+## Deployment of deployment and service yaml 
+
 ![Minikube Service Open](https://github.com/user-attachments/assets/5e8f065e-b60a-4cb0-ad51-eeaefbc6ef81)
 
 ![Port Forward](https://github.com/user-attachments/assets/c1748c3b-ce94-4daf-89bb-4a082123188c)
