@@ -115,6 +115,81 @@ Should show the NodePort service.
 ![Application Running - 2](https://github.com/user-attachments/assets/c2851c90-479e-4acf-af32-d3a7247ae944)
 
 ---
+Sure! Here's a **shortened** and clean version of the `README.md` 👇:
+
+---
+
+# 📈 Install Prometheus & Grafana on Minikube (EC2 AWS)
+
+## ✨ Prerequisites
+- EC2 with Minikube running.
+- `kubectl` and `helm` installed.
+- Open NodePort range (30000–32767) in EC2 security group.
+
+---
+
+## 🚀 Steps
+
+### 1. Start Minikube
+```bash
+minikube start --memory=4096 --cpus=4 --addons=ingress
+```
+
+### 2. Install Helm
+```bash
+sudo apt update && sudo apt install -y helm
+```
+
+### 3. Add Prometheus Helm Repo
+```bash
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+```
+
+### 4. Create Monitoring Namespace
+```bash
+kubectl create namespace monitoring
+```
+
+### 5. Install Prometheus & Grafana
+```bash
+helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack -n monitoring
+```
+
+---
+
+## 📡 Expose Services
+
+### Option 1: NodePort (Public Access)
+
+- Change Grafana service to NodePort:
+  ```bash
+  kubectl patch svc kube-prometheus-stack-grafana -n monitoring -p '{"spec": {"type": "NodePort"}}'
+  ```
+- Get NodePort:
+  ```bash
+  kubectl get svc -n monitoring
+  ```
+- Access Grafana:
+  ```
+  http://<EC2-Public-IP>:<NodePort>
+  ```
+  Example:
+  ```
+  http://13.127.55.176:30007
+  ```
+
+> Default credentials:  
+> **Username:** admin  
+> **Password:** prom-operator
+
+---
+
+
+  ```
+
+---
+
 
 <img width="1402" alt="Screenshot 2025-04-27 at 12 15 19 PM" src="https://github.com/user-attachments/assets/03bcd22e-4594-4b7e-8009-acf7af8d7e8c" />
 <img width="1406" alt="Screenshot 2025-04-27 at 12 17 50 PM" src="https://github.com/user-attachments/assets/102c2815-d8cb-415d-812b-f8ef8325e163" />
