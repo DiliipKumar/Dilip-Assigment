@@ -241,11 +241,9 @@ jenkins/
 ![Jenkins Build Console 2](https://github.com/user-attachments/assets/d9fbc439-8d35-4cc2-92eb-63cb8e45421f)
 
 ![Jenkins Dashboard](https://github.com/user-attachments/assets/db3303ef-4de0-420a-8860-8d74eb075dec)
-```
+
 
 ---
-
-✅ Now **your images will show correctly** when you open the README on GitHub.
 
 ---
 
