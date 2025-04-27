@@ -74,7 +74,7 @@ Then access at [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 5. Verification
+##  Verification
 
 To verify everything is working:
 
