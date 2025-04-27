@@ -1,5 +1,5 @@
 ## Project Structure
-
+---
 project-root/
 ├── app/                          # Application source code and Docker configuration
 │   ├── Dockerfile                # Multi-stage Dockerfile for the Node.js application
