@@ -16,10 +16,20 @@ project-root/
 ├── jenkins/                      # CI
 │   └── backend-pipeline          # Jenkins pipeline definition
 │
-└── iac/                          # Infrastructure as Code configurations
-    └── (Terraform)               # Infrastructure provisioning files
+└── terraform-ec2-module/
+├── main.tf               # Root module calling the EC2 instance module
+├── variables.tf          # (Optional) Root variables
+├── outputs.tf            # (Optional) Root outputs (e.g., instance ID, public IP)
+├── versions.tf           # Provider version and configuration
+├── terraform.tfvars      # (Optional) Variables with values
+└── modules/
+    └── ec2-instance/
+        ├── main.tf       # EC2 instance resource definition (module)
+        ├── variables.tf  # Module-specific variables
+        ├── outputs.tf    # Module-specific outputs (e.g., instance ID, public IP)
+        ├── versions.tf   # Module provider version and configuration
 
----
+
 ```
 
 ```markdown
