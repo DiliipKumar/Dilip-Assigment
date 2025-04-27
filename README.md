@@ -1,4 +1,5 @@
 ## Project Structure
+```
 ---
 project-root/
 ├── app/                          # Application source code and Docker configuration
@@ -19,8 +20,7 @@ project-root/
     └── (Terraform)               # Infrastructure provisioning files
 
 ---
-
-Here’s your corrected version:
+```
 
 ```markdown
 # Node App Kubernetes Deployment
