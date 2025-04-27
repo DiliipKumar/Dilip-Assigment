@@ -16,7 +16,7 @@ project-root/
 ├── jenkins/                      # CI
 │   └── backend-pipeline          # Jenkins pipeline definition
 │
-└── terraform-ec2-module/
+└── IAC
 ├── main.tf               # Root module calling the EC2 instance module
 ├── variables.tf          # (Optional) Root variables
 ├── outputs.tf            # (Optional) Root outputs (e.g., instance ID, public IP)
