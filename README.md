@@ -107,7 +107,7 @@ Should show the NodePort service.
 ![Successful Deployment](https://github.com/user-attachments/assets/08485dc9-ef46-4193-aa15-5e94c57bdcf8)
 
 ![Application Running](https://github.com/user-attachments/assets/44539359-9377-41c6-8aa3-7fabe0a0a012)
-
+---
 ##  Verification by postman application is running fine in kubernetes minikube
 
 ![Application Running - 2](https://github.com/user-attachments/assets/c2851c90-479e-4acf-af32-d3a7247ae944)
