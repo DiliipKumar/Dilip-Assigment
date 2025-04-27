@@ -186,7 +186,7 @@ helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack -n
 ---
 
 
-  ```
+  
 
 ---
 
@@ -243,7 +243,4 @@ jenkins/
 ![Jenkins Dashboard](https://github.com/user-attachments/assets/db3303ef-4de0-420a-8860-8d74eb075dec)
 
 
----
-
----
 
